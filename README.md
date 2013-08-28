@@ -15,8 +15,8 @@ Known Issues
 
 Changelog
 ---------
-*2013-08-28 - Initial release
-	Uses jQuery to update the page every 6 second.
-	Reads output from a textfile made with "tdtool --list" which is located in the same directory (tdtool.txt)
-	Room/Device must be diviced with ; - Example "Livingroom;Window Lamp"
-	Reads temperature from sensors (Tellstick Duo) with "fineoffset" protocol. Set ID and location in control.php!
+* 2013-08-28 - Initial release
+    Uses jQuery to update the page every 6 second.
+    Reads output from a textfile made with "tdtool --list" which is located in the same directory (tdtool.txt)
+    Room/Device must be diviced with ; - Example "Livingroom;Window Lamp"
+    Reads temperature from sensors (Tellstick Duo) with "fineoffset" protocol. Set ID and location in control.php!
