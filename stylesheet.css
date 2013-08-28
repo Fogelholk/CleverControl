@@ -1,0 +1,104 @@
+@font-face {
+	font-family: Comfortaa;
+	src: url(Comfortaa-Regular.woff);
+	src: url(Comfortaa-Regular.ttf) !important;
+}
+html{
+-moz-text-size-adjust:100%;
+-webkit-text-size-adjust:100%;
+-ms-text-size-adjust:100%;
+}
+body{
+background:#1d1f21 none;
+color:#c5c8c6;
+font-family:Comfortaa;
+font-size:22pt;
+text-align:center;
+margin-left:0;
+margin-right:0;
+margin-top:10px;
+padding-left:5px;
+padding-right:5px;
+}
+.wrapper{
+width:94%;
+max-width:920px;
+background-color:#282a2e;
+border:1px solid #282a2e;
+margin:auto;
+padding:5px 2%;
+box-shadow:0px 0px 10px #121415;
+border-radius: 10px;
+}
+.title{
+background-color:#303237;
+border:1px solid #282a2e;
+padding:5px;
+font-weight:bold;
+border-radius: 5px;
+}
+.control{
+border:1px solid #282a2e;
+font-size:20pt;
+background-color:#303237;
+color:#5F89AC;
+font-family:Comfortaa;
+padding:5px;
+padding-right:8px;
+margin:10px;
+display: inline-block;
+box-shadow:0px 0px 5px #121415;
+border-radius: 5px;
+}
+.control:active{
+background-color:#35373d;
+box-shadow:0px 0px 15px #121415;
+color:#81a2be;
+}
+.circlegreen {
+border-radius: 50%;
+width: 15px;
+height: 15px;
+background-image: -moz-radial-gradient(45px 45px 45deg, circle cover, white 40%, green 100%);
+background-image: -webkit-radial-gradient(45px 45px, circle cover, white, green);
+background-image: radial-gradient(45px 45px 45deg, circle cover, white 40%, green 100%);
+display: inline-block;
+vertical-align: middle;
+}
+.circlered {
+border-radius: 50%;
+width: 15px;
+height: 15px;
+background-image: -moz-radial-gradient(45px 45px 45deg, circle cover, white 40%, red 100%);
+background-image: -webkit-radial-gradient(45px 45px, circle cover, white, red);
+background-image: radial-gradient(45px 45px 45deg, circle cover, white 40%, red 100%);
+display: inline-block;
+vertical-align: middle;
+}
+.circleorange {
+border-radius: 50%;
+width: 15px;
+height: 15px;
+background-image: -moz-radial-gradient(45px 45px 45deg, circle cover, white 40%, orange 100%);
+background-image: -webkit-radial-gradient(45px 45px, circle cover, white, orange);
+background-image: radial-gradient(45px 45px 45deg, circle cover, white 40%, orange 100%);
+display: inline-block;
+vertical-align: middle;
+}
+#alert {
+background-color:#303c37;
+border:1px solid #282a2e;
+padding:5px;
+font-size:12pt;
+font-weight:bold;
+border-radius: 5px;
+}
+hr{
+border:none;
+border-top:5px solid #1d1f21;
+height:0;
+}
+img{
+border:0;
+vertical-align: middle;
+}
