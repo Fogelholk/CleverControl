@@ -19,3 +19,9 @@ Known Issues
 * jQuery animation when a device is controlled might get cut because of the auto refresh.
 * I currently don't own any dimmers, hence the script might/should not work with them (yet) :) 
 * Only updates the tdtool.txt when a device is changed. My current workaround is a cronjob every 15 minutes to update tdtool.txt in the background.
+* A few hardcoded knockups (for example temperature sensors) and fault tollerance needs to be looked over.
+
+Screenshot
+----------
+Example of how it can look :)
+<img src="https://fogelholk.se/clevercontrol.png" />
