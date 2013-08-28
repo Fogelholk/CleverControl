@@ -1,4 +1,5 @@
 <?php
+if(file_exists("tdtool.txt")){
 	$file = file_get_contents("tdtool.txt"); //read from "tdtool --list > tdtool.txt"
 	$rows = array_filter(explode("\n",$file));
 	$printsensors = array(163 => "Outside"); //Set sensors (fineoffset) to be included on the page ID => Location/Name
@@ -50,3 +51,8 @@ $( "button" ).click(function() {
 	$('#alert').slideDown('fast').html($(this).text() + " turned " + this.value).delay(1500).slideUp('slow');
 });
 </script>
+<?php
+} else {
+	echo "tdtool.txt does not exist!";
+}
+?>
