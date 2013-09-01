@@ -12,7 +12,7 @@ body{
 background:#1d1f21 none;
 color:#c5c8c6;
 font-family:Comfortaa;
-font-size:22pt;
+font-size:4vh;
 text-align:center;
 margin-left:0;
 margin-right:0;
@@ -39,7 +39,7 @@ border-radius: 5px;
 }
 .control{
 border:1px solid #282a2e;
-font-size:20pt;
+font-size:3vh;
 background-color:#303237;
 color:#5F89AC;
 font-family:Comfortaa;
@@ -89,7 +89,7 @@ vertical-align: middle;
 background-color:#303c37;
 border:1px solid #282a2e;
 padding:5px;
-font-size:12pt;
+font-size:2vh;
 font-weight:bold;
 border-radius: 5px;
 }
