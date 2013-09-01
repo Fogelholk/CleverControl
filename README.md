@@ -11,9 +11,8 @@ Information
 -----------
 * Uses jQuery to update the page every 6 second.
 * Reads output from a textfile made with "tdtool --list" which is located in the same directory (tdtool.txt)
-* Room/Device must be diviced with ; - Example "Livingroom;Window Lamp"
+* Room/Device must be divided with ; - Example "Livingroom;Window Lamp"
 * Reads temperature from sensors (Tellstick Duo) with "fineoffset" protocol. Set ID and location in control.php!
-* Optimized for Firefox only at the moment!
 
 Known Issues
 ------------
@@ -21,6 +20,7 @@ Known Issues
 * I currently don't own any dimmers, hence the script might/should not work with them (yet) :) 
 * Only updates the tdtool.txt when a device is changed. My current workaround is a cronjob every 15 minutes to update tdtool.txt in the background.
 * A few hardcoded knockups (for example temperature sensors) and fault tollerance needs to be looked over.
+* Only tested and optimized for Firefox at the moment!
 
 Screenshot
 ----------
