@@ -2,7 +2,7 @@
 if(file_exists("tdtool.txt")){
 	$file = file_get_contents("tdtool.txt"); //read from "tdtool --list > tdtool.txt"
 	$rows = array_filter(explode("\n",$file));
-	$printsensors = array(163 => "Outside"); //Set sensors (fineoffset) to be included on the page ID => Location/Name (Example: 163 => "Outside")
+	$printsensors = array(); //Set sensors (fineoffset) to be included on the page ID => Location/Name (Example: 163 => "Outside")
 	array_shift($rows);
 	foreach($rows as $row => $data){
 		$new_data = explode("\t",$data);
