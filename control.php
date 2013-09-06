@@ -46,7 +46,7 @@ if(file_exists("tdtool.txt")){
 <script>
 $('#alert').hide();
 $( "button" ).click(function() {
-//	$.get("action.php",{action: this.value, switch: this.name});
+	$.get("action.php",{action: this.value, switch: this.name});
 //	clearInterval(auto_refresh); //to be fixed.. Stop auto_refresh while animation is going on and resume when animation is done
 	$('#alert').slideDown('fast').html($(this).text() + " turned " + this.value).delay(1500).slideUp('slow');
 });
