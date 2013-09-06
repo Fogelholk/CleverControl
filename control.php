@@ -2,7 +2,7 @@
 if(file_exists("tdtool.txt")){
 	$file = file_get_contents("tdtool.txt"); //read from "tdtool --list > tdtool.txt"
 	$rows = array_filter(explode("\n",$file));
-	$printsensors = array(); //Set sensors (fineoffset) to be included on the page ID => Location/Name (Example: 163 => "Outside")
+	$printsensors = array(163 => "Outside"); //Set sensors (fineoffset) to be included on the page ID => Location/Name (Example: 163 => "Outside")
 	array_shift($rows);
 	foreach($rows as $row => $data){
 		$new_data = explode("\t",$data);
@@ -37,7 +37,7 @@ if(file_exists("tdtool.txt")){
 		echo "<div class='title'>Sensors</div>";
 		foreach($printsensors as $sensorid => $placement){
 			if(is_numeric($sensorid)){
-				echo "<span class='control'>".$placement.": ".$sensors[$sensorid][temperature]." @ ".$sensors[$sensorid][lastupdate]."</span>";
+				echo "<span class='control sensors'>".$placement.": ".$sensors[$sensorid][temperature]." @ ".$sensors[$sensorid][lastupdate]."</span>";
 			}
 		}
 	}
@@ -46,7 +46,7 @@ if(file_exists("tdtool.txt")){
 <script>
 $('#alert').hide();
 $( "button" ).click(function() {
-	$.get("action.php",{action: this.value, switch: this.name});
+//	$.get("action.php",{action: this.value, switch: this.name});
 //	clearInterval(auto_refresh); //to be fixed.. Stop auto_refresh while animation is going on and resume when animation is done
 	$('#alert').slideDown('fast').html($(this).text() + " turned " + this.value).delay(1500).slideUp('slow');
 });
