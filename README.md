@@ -25,4 +25,4 @@ Known Issues
 Screenshot
 ----------
 Example of how it can look :)
-<img src="https://fogelholk.se/clevercontrol.png" />
+<img src="https://img.fogelholk.se/clevercontrol.png" />
