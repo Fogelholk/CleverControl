@@ -7,6 +7,8 @@ My Tellstick control panel mainly used from my mobile to easily tinker with my d
 
 Font (Comfortaa) downloaded from http://www.deviantart.com/art/Comfortaa-font-105395949 - Thanks!
 
+Thanks [Ranzdo](https://github.com/Ranzdo) for some help with jQuery
+
 Information
 -----------
 * Only tested with tdtool 2.1.2_rc1 (some elements has moved around in the tdtool --list output)
