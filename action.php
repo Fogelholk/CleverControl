@@ -1,5 +1,23 @@
 <?php
-	if(($_GET['action'] === "off" || $_GET['action'] === "on") && is_numeric($_GET['switch'])){
-		exec("tdtool --".escapeshellcmd($_GET['action'])." ".escapeshellcmd($_GET['switch'])." && tdtool --list > tdtool-new.txt && mv tdtool-new.txt tdtool.txt");
+	if(is_numeric($_GET['switch'])){
+		$switch = escapeshellcmd($_GET['switch']);
+		
+		switch ($_GET['action']) {
+			case "off":
+			$action = "f";
+			break;
+			
+			case "on":
+			$action = "n";
+			break;
+			
+			case "dim":
+			if(is_numeric($_GET['dimlevel'])){
+				$dimlevel = escapeshellcmd($_GET['dimlevel']);
+			}
+			$action = "v ".$dimlevel." -d";
+			break;
+		}
+		exec("tdtool -".$action." ".$switch." && tdtool --list-devices > tdtool-devices-new.txt && mv tdtool-devices-new.txt tdtool-devices.txt");
 	}
 ?>
