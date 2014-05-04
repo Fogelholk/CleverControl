@@ -11,17 +11,16 @@ Thanks [Ranzdo](https://github.com/Ranzdo) for some help with jQuery
 
 Information
 -----------
-* Only tested with tdtool 2.1.2_rc1 (some elements has moved around in the tdtool --list output)
+* Only tested/functional with tdtool 2.1.2_rc1 (some elements has moved around and new output-command with 'tdtool --list-devices' and 'tdtool --list-sensors')
 * Uses jQuery to refresh elements every 3 and 5 second (3 for buttons, 5 for temperature sensors)
-* Reads output from a textfile made with "tdtool --list" which is located in the same directory (tdtool.txt)
-* Room/Device must be divided with ; - Example "Livingroom;Window Lamp"
-* Reads temperature from sensors (Tellstick Duo) with "fineoffset" protocol. Set ID and location in control.php!
+* Reads output from a textfile made with "tdtool --list-devices" and "tdtool --list-sensors" which is located in the same directory (tdtool-devices.txt and tdtool-sensors.txt)
+* Room/Device must be divided with ; - Example "Livingroom;Window Lamp" for best functionality
+* Reads temperature from sensors (Tellstick Duo). Set ID and location in control.php!
+* Initial support for dimmer control. Dimmable lights has to be named for example "Livingroom;Window Lamp;Dimmable" for the slider to show
 
 Known Issues
 ------------
-* Has very small support for dimmers (only ON and OFF commands sent to them), would appreciate help with this!
-* Only reconstructs the tdtool.txt when a device is changed. My current workaround is a cronjob every 15 minutes to update tdtool.txt in the background.
-* A few hardcoded knockups (for example temperature sensors) and fault tollerance needs to be looked over.
+* Only reconstructs the tdtool-devices.txt when a device is changed. My current workaround is a cronjob every 5 minutes to update tdtool-devices.txt in the background.
 * Only tested and optimized for Firefox at the moment!
 
 Screenshot
