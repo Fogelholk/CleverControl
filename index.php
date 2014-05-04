@@ -7,10 +7,10 @@
 		<script type="text/javascript" src="jquery-2.1.0.min.js"></script>
 		<script>
 		$.ajaxSetup({timeout:2000});
-		var buttons;
+		var devices;
 		function loadButtons() {
-			$.get("control.php", { type: "buttons" }, function(data) {
-				$("#buttons").html(data);
+			$.get("control.php", { type: "devices" }, function(data) {
+				$("#devices").html(data);
 			});
 		}
 		function loadSensors() {
@@ -20,9 +20,13 @@
 		}
 		function loadAlert() {
 			$('#alert').hide();
-			$("#buttons").on('click', 'button', function() {
+			$("#devices").on('click', 'button', function() {
 				$.get("action.php",{action: this.value, switch: this.name});
 				$('#alert').slideDown('fast').html($(this).text() + " turned " + this.value).delay(1500).slideUp('slow');
+			});
+			$("#devices").on('change', 'input', function() {
+				$.get("action.php",{action: "dim", switch: this.name, dimlevel: this.value});
+				$('#alert').slideDown('fast').html($(this).data('name') + " dimmed to " + this.value).delay(1500).slideUp('slow');
 			});
 		}
 		$(function() {
@@ -36,7 +40,7 @@
 	</head>
 	<body>
 		<div class='wrapper'>
-			<div id='buttons'></div>
+			<div id='devices'></div>
 			<div id='sensors'></div>
 			<div id='alert'>Ponies!</div>
 		</div>
