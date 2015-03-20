@@ -76,9 +76,11 @@ body {
 	background:#303237;
 	border-radius: 10px;
 	height: 5px;
+	border: 1px solid #c5c8c6;
 }
 .sensors {
 	font-size:95%;
+	margin: 5px 10px 5px 10px;
 }
 .circlegreen {
 	border-radius: 50%;
