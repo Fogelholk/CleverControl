@@ -4,7 +4,7 @@
 		<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0" />
 		<title>CleverControl</title>
 		<link href="stylesheet.css" rel="stylesheet" type="text/css" />
-		<script type="text/javascript" src="jquery-2.1.0.min.js"></script>
+		<script type="text/javascript" src="jquery-2.1.3.min.js"></script>
 		<script>
 		$.ajaxSetup({timeout:2000});
 		var devices;

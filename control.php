@@ -64,9 +64,16 @@ if ($_GET['type'] === "sensors" && file_exists("tdtool-sensors.txt")){
 		foreach($rows as $row => $data){
 			$new_data = explode("\t",$data);
 			$sid = str_replace("id=","",$new_data[3]);
-			$stemp = str_replace("temperature=","",$new_data[4]);
-			$supdate = str_replace("time=","",$new_data[5]);
-			$sensors[$sid] = array("id" => $sid, "temperature" => $stemp."&deg;C", "lastupdate" => $supdate);
+                        $stemp = str_replace("temperature=","",$new_data[4]);
+                        $stemp .= "&deg;C";
+                        if ($new_data[2] === "model=temperaturehumidity") {
+                                $shumidity = str_replace("humidity=","",$new_data[5]);
+                                $stemp .= " (".$shumidity."&#37;)";
+                                $supdate = str_replace("time=","",$new_data[6]);
+                        } else {
+                                $supdate = str_replace("time=","",$new_data[5]);
+                        }
+                        $sensors[$sid] = array("id" => $sid, "temperature" => $stemp, "lastupdate" => $supdate);
 		}
 		foreach($printsensors as $sensorid => $placement){
 			if(is_numeric($sensorid)){
